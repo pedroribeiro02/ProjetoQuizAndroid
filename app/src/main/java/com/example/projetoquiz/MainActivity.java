@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        txvPergunta = findViewById(R.id.txv_perguntas);
+        rdgPrincipal = findViewById(R.id.rbg_principal);
+        btnResponder = findViewById(R.id.btn_responder);
+
+        //Nosso metodo
+        //carregarPerguntas();
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
